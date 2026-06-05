@@ -1,84 +1,78 @@
-# This file is used to ignore files which are generated
-# ----------------------------------------------------------------------------
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
 
-*~
-*.autosave
-*.a
-*.core
-*.moc
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Databricks / data outputs
+.databricks/
+*.dbc
+*.parquet
+*.delta/
+*.sqlite
+*.db
+
+# Keep small sample JSONL files only if intentionally committed.
+# Uncomment this later if datasets get large:
+# agent/data/*.jsonl
+
+# CMake / C++ build outputs
+/build/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.ninja
+.ninja_*
+compile_commands.json
+
+# Qt generated files
+*.pro.user
+*.qmake.stash
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# C++ binaries / object files
 *.o
 *.obj
-*.orig
-*.rej
+*.a
+*.lib
 *.so
-*.so.*
-*_pch.h.cpp
-*_resource.rc
-*.qm
-.#*
-*.*#
-core
-!core/
-tags
-.DS_Store
-.directory
-*.debug
-Makefile*
-*.prl
-*.app
-moc_*.cpp
-ui_*.h
-qrc_*.cpp
-Thumbs.db
-*.res
-*.rc
-/.qmake.cache
-/.qmake.stash
-**/.qmlls.ini
-
-# qtcreator generated files
-*.pro.user*
-*.qbs.user*
-CMakeLists.txt.user*
-
-# xemacs temporary files
-*.flc
-
-# Vim temporary files
-.*.swp
-
-# Visual Studio generated files
-*.ib_pdb_index
-*.idb
-*.ilk
-*.pdb
-*.sln
-*.suo
-*.vcproj
-*vcproj.*.*.user
-*.ncb
-*.sdf
-*.opensdf
-*.vcxproj
-*vcxproj.*
-
-# MinGW generated files
-*.Debug
-*.Release
-
-# Python byte code
-*.pyc
-
-# Binaries
-# --------
+*.dylib
 *.dll
 *.exe
+*.app
+*.out
 
-# Directories with generated files
-.moc/
-.obj/
-.pch/
-.rcc/
-.uic/
-/build*/
-/.qtcreator/
+# IDE/editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
